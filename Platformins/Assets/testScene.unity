@@ -129,7 +129,7 @@ GameObject:
   - 33: {fileID: 192830579}
   - 23: {fileID: 192830578}
   - 61: {fileID: 192830577}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - 33: {fileID: 548908574}
   - 23: {fileID: 548908573}
   - 61: {fileID: 548908572}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   - 4: {fileID: 612309151}
   - 33: {fileID: 612309150}
   - 23: {fileID: 612309149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,6 +378,87 @@ Transform:
   m_LocalScale: {x: 2, y: 1.23200536, z: 1}
   m_Children: []
   m_Father: {fileID: 1159489257}
+--- !u!1 &857294836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 857294840}
+  - 33: {fileID: 857294839}
+  - 23: {fileID: 857294838}
+  - 61: {fileID: 857294837}
+  - 114: {fileID: 857294841}
+  m_Layer: 8
+  m_Name: Footies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &857294837
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857294836}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!23 &857294838
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857294836}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!33 &857294839
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857294836}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &857294840
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857294836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.477873534, z: 0}
+  m_LocalScale: {x: .975000024, y: .136355489, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1159489257}
+--- !u!114 &857294841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857294836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62ea76ef4bcf4aa79078af41c6d493e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floors: []
 --- !u!1 &875378609
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +470,7 @@ GameObject:
   - 33: {fileID: 875378612}
   - 23: {fileID: 875378611}
   - 61: {fileID: 875378610}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +667,7 @@ GameObject:
   - 50: {fileID: 1159489259}
   - 114: {fileID: 1159489262}
   - 61: {fileID: 1159489258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,6 +684,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -.730188847, z: 0}
   m_LocalScale: {x: .5, y: .949999988, z: 1}
   m_Children:
+  - {fileID: 857294840}
   - {fileID: 612309151}
   m_Father: {fileID: 0}
 --- !u!61 &1159489258
@@ -671,7 +753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 3
-  runSpeed: 7.5
+  runSpeed: 8.25
   jumpSpeed: 9
   gravScale: 2.5
 --- !u!1 &1184784274
@@ -685,7 +767,7 @@ GameObject:
   - 33: {fileID: 1184784277}
   - 23: {fileID: 1184784276}
   - 61: {fileID: 1184784275}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -800,7 +882,7 @@ GameObject:
   - 33: {fileID: 1360029825}
   - 23: {fileID: 1360029824}
   - 61: {fileID: 1360029827}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,7 +1038,7 @@ GameObject:
   - 33: {fileID: 1545998952}
   - 23: {fileID: 1545998951}
   - 61: {fileID: 1545998950}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1027,7 +1109,7 @@ GameObject:
   - 33: {fileID: 1671011231}
   - 23: {fileID: 1671011230}
   - 61: {fileID: 1671011229}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1268,7 @@ GameObject:
   - 33: {fileID: 1854936130}
   - 23: {fileID: 1854936129}
   - 61: {fileID: 1854936128}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,7 +1383,7 @@ GameObject:
   - 33: {fileID: 2102924467}
   - 23: {fileID: 2102924466}
   - 61: {fileID: 2102924465}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
