@@ -15,6 +15,10 @@ public class Platformer : MonoBehaviour
 	bool isRunning = false;
 	bool isGrounded = false;
 
+	//made this bool public just because i don't know how you're going to use it
+	public bool isFacingRight = true; //This is assuming we start facing right
+	public Transform spriteTransform;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -59,6 +63,16 @@ public class Platformer : MonoBehaviour
 			}
 		}
 
+		if(isFacingRight)
+		{
+			if(myVelo.x < 0)
+				FlipHorizontal();
+		}
+		else
+		{
+			if(myVelo.x > 0)
+				FlipHorizontal();
+		}
 
 		if(Mathf.Abs(myVelo.y) > jumpSpeed)	//limit y-axis speed for constant falling
 		{
@@ -69,6 +83,14 @@ public class Platformer : MonoBehaviour
 		}
 
 		rigidbody2D.velocity = myVelo;	//apply our given velocity
+	}
+
+	void FlipHorizontal()
+	{
+		isFacingRight = !isFacingRight;
+		Vector3 scale = spriteTransform.localScale;
+		scale.x *= -1;
+		spriteTransform.localScale = scale;
 	}
 
 	void Jump()	//Jump around. Jump around. Jump up, jump up and get down!
