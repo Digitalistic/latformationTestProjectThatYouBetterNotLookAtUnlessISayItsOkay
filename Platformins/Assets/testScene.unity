@@ -756,6 +756,7 @@ MonoBehaviour:
   runSpeed: 8.25
   jumpSpeed: 9
   gravScale: 2.5
+  isFacingRight: 1
   spriteTransform: {fileID: 612309151}
 --- !u!1 &1184784274
 GameObject:

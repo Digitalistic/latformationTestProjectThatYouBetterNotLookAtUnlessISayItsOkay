@@ -1,8 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scriptures/Platformer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../TriviaMatch/TriviaMatchGame/Assets/Scriptures/Card.cs">
     <Files>
-      <File FileName="Assets/Scriptures/Platformer.cs" Line="18" Column="78" />
+      <File FileName="../../TriviaMatch/TriviaMatchGame/Assets/Scriptures/CardManagerSlide.cs" Line="339" Column="35" />
+      <File FileName="../../TriviaMatch/TriviaMatchGame/Assets/Scriptures/Card.cs" Line="214" Column="22" />
+      <File FileName="../../TriviaMatch/TriviaMatchGame/Assets/Scriptures/Randomizer.cs" Line="50" Column="121" />
+      <File FileName="../../TriviaMatch/TriviaMatchGame/Assets/unity - sample data - Sheet1.txt" Line="31" Column="77" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
